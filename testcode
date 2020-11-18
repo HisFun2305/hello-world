@@ -1,0 +1,20 @@
+def lucky_seven(n):
+  num = 1
+  global numlist
+  numlist = []
+  while num <= n:
+    if num % 7 == 0:
+      numlist.append(num)
+      num += 1
+    elif '7' in str(num):
+      numlist.append(num)
+      num += 1
+    else:
+      num += 1
+  x = str(numlist[0])
+  numlist.pop(0)
+  for y in numlist:
+    x = x + ', ' + str(y)
+  
+  x = '\'' + x + '\''
+  return (x)
